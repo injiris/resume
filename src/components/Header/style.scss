@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  padding-top: 40px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  > .texts {
+    padding: 32px;
+    background-color: white;
+    border: 1px solid black;
+
+    > .title {
+      margin: 0px;
+      text-transform: uppercase;
+    }
+
+    > .description {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 0px;
+    }
+  }
+}

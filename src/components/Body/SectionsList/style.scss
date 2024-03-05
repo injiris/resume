@@ -1,0 +1,17 @@
+.section {
+  > .title {
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+  }
+
+  > .item {
+    > .title {
+      margin-bottom: 0px;
+    }
+
+    > .description {
+      margin-top: 8px;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  > .title {
+    width: 90%;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+  }
+
+  > .box {
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+
+    > .text {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+  }
+}

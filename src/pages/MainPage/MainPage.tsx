@@ -9,93 +9,93 @@ import "./style.scss";
 export default function MainPage() {
   const courses = [
     {
-      name: "HTML5 and CSS3 part 1: The first web page",
-      date: "Jun 2021",
+      title: "HTML5 and CSS3 part 1: The first web page",
+      description: "Jun 2021",
     },
     {
-      name: "HTML5 and CSS3 part 2: Positioning, lists and navigation",
-      date: "Jun 2021",
+      title: "HTML5 and CSS3 part 2: Positioning, lists and navigation",
+      description: "Jun 2021",
     },
     {
-      name: "HTML5 and CSS3 part 3: Working with forms and tables",
-      date: "Out 2021",
+      title: "HTML5 and CSS3 part 3: Working with forms and tables",
+      description: "Out 2021",
     },
     {
-      name: "Sass: CSS with superpowers",
-      date: "Ago 2021",
+      title: "Sass: CSS with superpowers",
+      description: "Ago 2021",
     },
     {
-      name: "Git and Github: Control and share your code",
-      date: "Out 2021",
+      title: "Git and Github: Control and share your code",
+      description: "Out 2021",
     },
     {
-      name: "Chrome DevTools: analyze, inspect and debug your web pages",
-      date: "Fev 2022",
+      title: "Chrome DevTools: analyze, inspect and debug your web pages",
+      description: "Fev 2022",
     },
     {
-      name: "TypeScript part 1: Evolving your JavaScript",
-      date: "Out 2021",
+      title: "TypeScript part 1: Evolving your JavaScript",
+      description: "Out 2021",
     },
     {
-      name: "Angular: Starting with the Framework",
-      date: "Feb 2022",
+      title: "Angular: Starting with the Framework",
+      description: "Feb 2022",
     },
     {
-      name: "Angular: Best practices in architectures and forms",
-      date: "Out 2021",
+      title: "Angular: Best practices in architectures and forms",
+      description: "Out 2021",
     },
     {
-      name: "Angular: Automated tests with Jasmine and Karma",
-      date: "Out 2021",
+      title: "Angular: Automated tests with Jasmine and Karma",
+      description: "Out 2021",
     },
     {
-      name: "Spring Boot API REST: Build an API",
-      date: "Feb 2022",
+      title: "Spring Boot API REST: Build an API",
+      description: "Feb 2022",
     },
 
     {
-      name: "React: Understanding how Libraries Works",
-      date: "Mar 2022",
+      title: "React: Understanding how Libraries Works",
+      description: "Mar 2022",
     },
     {
-      name: "React: Dealing with Static Files",
-      date: "Mar 2022",
+      title: "React: Dealing with Static Files",
+      description: "Mar 2022",
     },
     {
-      name: "React Fundamentals: Writing with Typescript",
-      date: "Mar 2022",
+      title: "React Fundamentals: Writing with Typescript",
+      description: "Mar 2022",
     },
     {
-      name: "React: Global State Management with Context API",
-      date: "Apr 2022",
+      title: "React: Global State Management with Context API",
+      description: "Apr 2022",
     },
     {
-      name: "React: Optimizing Performance",
-      date: "Jul 2022",
+      title: "React: Optimizing Performance",
+      description: "Jul 2022",
     },
     {
-      name: "React: Integrating your React project with APIs",
-      date: "Jul 2022",
+      title: "React: Integrating your React project with APIs",
+      description: "Jul 2022",
     },
     {
-      name: "HTTP: Understanding the web behind the scenes",
-      date: "Jul 2022",
+      title: "HTTP: Understanding the web behind the scenes",
+      description: "Jul 2022",
     },
     {
-      name: "Bootstrap 4: Creating a Responsive Landing Page",
-      date: "Jul 2022",
+      title: "Bootstrap 4: Creating a Responsive Landing Page",
+      description: "Jul 2022",
     },
     {
-      name: "Java OO: Introduction to Object Orientation",
-      date: "Jan 2022",
+      title: "Java OO: Introduction to Object Orientation",
+      description: "Jan 2022",
     },
     {
-      name: "Java Polymorphism: Understand heritance and interfaces",
-      date: "Fev 2022",
+      title: "Java Polymorphism: Understand heritance and interfaces",
+      description: "Fev 2022",
     },
     {
-      name: "Java Exceptions: Learn to Create, Throw, and Handle Exceptions",
-      date: "Mar 2022",
+      title: "Java Exceptions: Learn to Create, Throw, and Handle Exceptions",
+      description: "Mar 2022",
     },
   ];
 
@@ -152,14 +152,12 @@ export default function MainPage() {
     ],
     education: [
       {
-        course: "Civil Engineering",
-        period: "Jan 2011 - Dec 2015",
-        type: "Bachelor’s degree",
+        title: "Bachelor’s degree, Civil Engineering",
+        description: "Jan 2011 - Dec 2015",
       },
       {
-        course: "Software Architecture",
-        period: "Mar 2023 - Oct 2023",
-        type: "Postgraduate degree",
+        title: "Postgraduate degree, Software Architecture",
+        description: "Mar 2023 - Oct 2023",
       },
     ],
   };

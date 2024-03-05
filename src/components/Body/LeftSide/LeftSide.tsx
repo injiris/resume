@@ -3,41 +3,38 @@ import "./style.scss";
 
 export type LeftSideProps = {
   email: string;
-  address: {
-    city: string;
-    country: string;
-  };
+  address: { city: string; country: string };
   links: Array<{ name: string; link: string }>;
-  languages: Array<{ name: string; level: string }>;
   skills: Array<{ name: string; level: string }>;
+  languages: Array<{ name: string; level: string }>;
 };
 
 export default function LeftSide({
-  email,
   links,
-  languages,
-  address,
+  email,
   skills,
+  address,
+  languages,
 }: LeftSideProps) {
   const { city, country } = address;
 
   return (
     <div className="left-side">
-      <div className="details">
+      <div className="container">
         <h4 className="title">Details</h4>
-        <div className="address">
+        <div className="box">
           <span className="title">Address</span>
           <span className="text">{city}</span>
           <span className="text">{country}</span>
         </div>
-        <div className="email">
+        <div className="box email">
           <span className="title">Email</span>
           <span className="text">{email}</span>
         </div>
       </div>
-      <div className="link">
+      <div className="container">
         <h4 className="title">Links</h4>
-        <div className="links">
+        <div className="box">
           {links.map((link) => (
             <a className="text" target="_blank" href={link.link}>
               {link.name}
@@ -45,8 +42,8 @@ export default function LeftSide({
           ))}
         </div>
       </div>
-      <RatingList itemsList={languages} />
-      <RatingList itemsList={skills} />
+      <RatingList itemsList={languages} title="Languages" />
+      <RatingList itemsList={skills} title="Skills" />
     </div>
   );
 }

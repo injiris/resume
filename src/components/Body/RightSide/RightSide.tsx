@@ -1,27 +1,24 @@
+import SectionsList from "../SectionsList";
 import "./style.scss";
 
 export type RightSideProps = {
   profile: string;
-  courses: Array<{ name: string; date: string }>;
+  courses: Array<{ title: string; description: string }>;
+  education: Array<{ title: string; description: string }>;
   experience: Array<{
     position: string;
     type: string;
+    period: string;
     company: string;
-    period: string;
     description: string;
-  }>;
-  education: Array<{
-    course: string;
-    type: string;
-    period: string;
   }>;
 };
 
 export default function RightSide({
-  courses,
   profile,
-  experience,
+  courses,
   education,
+  experience,
 }: RightSideProps) {
   return (
     <div className="right-side">
@@ -42,26 +39,8 @@ export default function RightSide({
           </div>
         ))}
       </div>
-      <div className="section">
-        <h4 className="title">Education</h4>
-        {education.map((ed) => (
-          <div className="schools">
-            <h4 className="title">{`${ed.type}, ${ed.course}`}</h4>
-            <h4 className="description">{ed.period}</h4>
-          </div>
-        ))}
-      </div>
-      <div className="section">
-        <h4 className="title">Courses</h4>
-        <div className="courses">
-          {courses.map((course) => (
-            <div className="course">
-              <h4 className="title">{course.name}</h4>
-              <h4 className="description">{course.date}</h4>
-            </div>
-          ))}
-        </div>
-      </div>
+      <SectionsList itemsList={education} title="Education" />
+      <SectionsList itemsList={courses} title="Courses" />
     </div>
   );
 }

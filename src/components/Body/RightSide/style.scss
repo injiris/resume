@@ -1,0 +1,28 @@
+.right-side {
+  width: 65%;
+
+  > .section {
+    > .title {
+      text-transform: uppercase;
+      border-bottom: 1px solid black;
+    }
+
+    > .description {
+      font-weight: 400;
+    }
+
+    .job {
+      .first-line {
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
+
+      .description {
+        margin-top: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}
