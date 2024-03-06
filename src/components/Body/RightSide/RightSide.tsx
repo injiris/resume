@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import SectionsList from "../SectionsList";
 import "./style.scss";
 
@@ -20,14 +21,16 @@ export default function RightSide({
   education,
   experience,
 }: RightSideProps) {
+  const { t } = useTranslation("resume");
+
   return (
     <div className="right-side">
       <div className="section">
-        <h4 className="title">Profile</h4>
+        <h4 className="title">{t("profile")}</h4>
         <h4 className="description">{profile}</h4>
       </div>
       <div className="section">
-        <h4 className="title">Employment history</h4>
+        <h4 className="title">{t("experience")}</h4>
         {experience.map((xp) => (
           <div className="job">
             <div className="first-line">

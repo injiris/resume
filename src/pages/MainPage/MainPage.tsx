@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import LeftSide from "../../components/Body/LeftSide";
 import { LeftSideProps } from "../../components/Body/LeftSide/LeftSide";
 import RightSide from "../../components/Body/RightSide";
@@ -7,106 +8,107 @@ import { HeaderProps } from "../../components/Header/Header";
 import "./style.scss";
 
 export default function MainPage() {
+  const { t } = useTranslation("resume");
+
   const courses = [
     {
-      title: "HTML5 and CSS3 part 1: The first web page",
-      description: "Jun 2021",
+      title: t("html-1"),
+      description: t("jun"),
     },
     {
-      title: "HTML5 and CSS3 part 2: Positioning, lists and navigation",
-      description: "Jun 2021",
+      title: t("html-2"),
+      description: t("jun"),
     },
     {
-      title: "HTML5 and CSS3 part 3: Working with forms and tables",
-      description: "Out 2021",
+      title: t("html-3"),
+      description: t("out"),
     },
     {
-      title: "Sass: CSS with superpowers",
-      description: "Ago 2021",
+      title: t("sass"),
+      description: t("ago"),
     },
     {
-      title: "Git and Github: Control and share your code",
-      description: "Out 2021",
+      title: t("git"),
+      description: t("out"),
     },
     {
-      title: "Chrome DevTools: analyze, inspect and debug your web pages",
-      description: "Fev 2022",
+      title: t("type-1"),
+      description: t("out"),
     },
     {
-      title: "TypeScript part 1: Evolving your JavaScript",
-      description: "Out 2021",
+      title: t("angular-1"),
+      description: t("out"),
     },
     {
-      title: "Angular: Starting with the Framework",
-      description: "Feb 2022",
+      title: t("angular-2"),
+      description: t("out"),
     },
     {
-      title: "Angular: Best practices in architectures and forms",
-      description: "Out 2021",
+      title: t("java-1"),
+      description: t("jan"),
     },
     {
-      title: "Angular: Automated tests with Jasmine and Karma",
-      description: "Out 2021",
+      title: t("chrome"),
+      description: t("feb"),
     },
     {
-      title: "Spring Boot API REST: Build an API",
-      description: "Feb 2022",
-    },
-
-    {
-      title: "React: Understanding how Libraries Works",
-      description: "Mar 2022",
+      title: t("spring"),
+      description: t("feb"),
     },
     {
-      title: "React: Dealing with Static Files",
-      description: "Mar 2022",
+      title: t("angular-3"),
+      description: t("feb"),
     },
     {
-      title: "React Fundamentals: Writing with Typescript",
-      description: "Mar 2022",
+      title: t("java-2"),
+      description: t("feb"),
     },
     {
-      title: "React: Global State Management with Context API",
-      description: "Apr 2022",
+      title: t("react-1"),
+      description: t("mar"),
     },
     {
-      title: "React: Optimizing Performance",
-      description: "Jul 2022",
+      title: t("react-2"),
+      description: t("mar"),
     },
     {
-      title: "React: Integrating your React project with APIs",
-      description: "Jul 2022",
+      title: t("react-3"),
+      description: t("mar"),
     },
     {
-      title: "HTTP: Understanding the web behind the scenes",
-      description: "Jul 2022",
+      title: t("java-3"),
+      description: t("mar"),
     },
     {
-      title: "Bootstrap 4: Creating a Responsive Landing Page",
-      description: "Jul 2022",
+      title: t("react-4"),
+      description: t("apr"),
     },
     {
-      title: "Java OO: Introduction to Object Orientation",
-      description: "Jan 2022",
+      title: t("react-5"),
+      description: t("jul"),
     },
     {
-      title: "Java Polymorphism: Understand heritance and interfaces",
-      description: "Fev 2022",
+      title: t("react-6"),
+      description: t("jul"),
     },
     {
-      title: "Java Exceptions: Learn to Create, Throw, and Handle Exceptions",
-      description: "Mar 2022",
+      title: t("http"),
+      description: t("jul"),
+    },
+    {
+      title: t("bootstrap"),
+      description: t("jul"),
     },
   ];
 
   const headerInfos: HeaderProps = {
     title: "Ingrid Piazza Nantes",
-    description: "Front-end developer",
+    description: t("position"),
   };
 
   const address = {
-    city: "João Pessoa - PB",
-    country: "Brasil",
+    city: t("city"),
+    country: t("country"),
   };
 
   const links = [
@@ -115,17 +117,17 @@ export default function MainPage() {
   ];
 
   const languages = [
-    { name: "Portuguese", level: "5" },
-    { name: "English", level: "4" },
+    { name: t("portuguese"), level: 5 },
+    { name: t("english"), level: 4 },
   ];
 
   const skills = [
-    { name: "HTML & CSS", level: "5" },
-    { name: "JavaScript", level: "5" },
-    { name: "TypeScript", level: "5" },
-    { name: "React", level: "5" },
-    { name: "Angular", level: "5" },
-    { name: "Unit tests", level: "5" },
+    { name: "HTML & CSS", level: 5 },
+    { name: "JavaScript", level: 5 },
+    { name: "TypeScript", level: 5 },
+    { name: "React", level: 5 },
+    { name: t("unit-tests"), level: 5 },
+    { name: "Angular", level: 3 },
   ];
 
   const leftSide: LeftSideProps = {
@@ -138,26 +140,24 @@ export default function MainPage() {
 
   const rightSide: RightSideProps = {
     courses,
-    profile:
-      "Three years experienced front-end developer adept in bringing expertise in design, installation, testing and maintenance of software systems. Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.",
+    profile: t("profile-description"),
     experience: [
       {
         company: "Iteris - Globant",
-        description:
-          "Implemented and updated web applications utilizing high level programming skills using JavaScript, Typescript, React and Angular. Using Karma and Jasmine for unit tests in Angular application and Testing Library and Jest in React application.",
-        type: "Remote job",
-        period: "May, 2021 - Present",
-        position: "Software Developer",
+        description: t("experience-description"),
+        type: t("remote"),
+        period: t("period"),
+        position: t("position"),
       },
     ],
     education: [
       {
-        title: "Bachelor’s degree, Civil Engineering",
-        description: "Jan 2011 - Dec 2015",
+        title: t("education-title-1"),
+        description: t("education-period-1"),
       },
       {
-        title: "Postgraduate degree, Software Architecture",
-        description: "Mar 2023 - Oct 2023",
+        title: t("education-title-2"),
+        description: t("education-period-2"),
       },
     ],
   };

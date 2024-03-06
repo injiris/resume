@@ -3,7 +3,7 @@ import "./style.scss";
 
 export type RightSideProps = {
   title: string;
-  itemsList: Array<{ name: string; level: string }>;
+  itemsList: Array<{ name: string; level: number }>;
 };
 
 export default function RatingList({ title, itemsList }: RightSideProps) {
@@ -13,7 +13,7 @@ export default function RatingList({ title, itemsList }: RightSideProps) {
       {itemsList.map((item) => (
         <div className="box">
           <span className="text">{item.name}</span>
-          <Rating />
+          <Rating level={item.level} />
         </div>
       ))}
     </div>

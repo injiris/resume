@@ -1,23 +1,18 @@
 import "./style.scss";
 
 export type RatingProps = {
-  email: string;
-  address: {
-    city: string;
-    country: string;
-  };
-  links: Array<{ name: string; link: string }>;
-  languages: Array<{ name: string; level: string }>;
+  level: number;
 };
 
-export default function Rating() {
-  return (
-    <ul className="skill-rating">
-      <li className="circle colorful"></li>
-      <li className="circle colorful"></li>
-      <li className="circle colorful"></li>
-      <li className="circle colorful"></li>
-      <li className="circle"></li>
-    </ul>
-  );
+export default function Rating({ level }: RatingProps) {
+  const validLevel = Math.max(0, Math.min(5, level));
+
+  const circles = Array.from({ length: 5 }, (_, index) => (
+    <li
+      key={index}
+      className={`circle ${index < validLevel ? "colorful" : ""}`}
+    ></li>
+  ));
+
+  return <ul className="skill-rating">{circles}</ul>;
 }
