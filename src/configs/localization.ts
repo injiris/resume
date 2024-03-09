@@ -1,20 +1,20 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { Texts } from "../constants/Texts";
+import { ResumeTexts } from "../constants/ResumeTexts";
 
 export default async function configLocalization() {
   await i18n.use(initReactI18next).init({
     resources: {
       "pt-BR": {
-        resume: Texts["pt-BR"],
+        resume: ResumeTexts["pt-BR"],
       },
       en: {
-        resume: Texts["en"],
+        resume: ResumeTexts["en"],
       },
     },
     lng: "pt-BR",
-    fallbackLng: "pt-BR",
-    defaultNS: "profile",
+    fallbackLng: "pt-BRs",
+    defaultNS: "resume",
     interpolation: {
       escapeValue: false,
     },

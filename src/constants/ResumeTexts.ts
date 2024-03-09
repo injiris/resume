@@ -1,4 +1,4 @@
-export const Texts = {
+export const ResumeTexts = {
   "pt-BR": {
     details: "Detalhes",
     address: "Endereço",
