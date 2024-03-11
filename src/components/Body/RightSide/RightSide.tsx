@@ -42,8 +42,8 @@ export default function RightSide({
           </div>
         ))}
       </div>
-      <SectionsList itemsList={education} title="Education" />
-      <SectionsList itemsList={courses} title="Courses" />
+      <SectionsList itemsList={education} title={t("education")} />
+      <SectionsList itemsList={courses} title={t("courses")} />
     </div>
   );
 }

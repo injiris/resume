@@ -44,8 +44,8 @@ export default function LeftSide({
           ))}
         </div>
       </div>
-      <RatingList itemsList={languages} title="Languages" />
-      <RatingList itemsList={skills} title="Skills" />
+      <RatingList itemsList={languages} title={t("languages")} />
+      <RatingList itemsList={skills} title={t("skills")} />
     </div>
   );
 }

@@ -13,7 +13,7 @@ export default async function configLocalization() {
       },
     },
     lng: "pt-BR",
-    fallbackLng: "pt-BRs",
+    fallbackLng: "pt-BR",
     defaultNS: "resume",
     interpolation: {
       escapeValue: false,
